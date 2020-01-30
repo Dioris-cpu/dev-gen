@@ -1,0 +1,35 @@
+{
+  "name": "dev-gen",
+  "version": "1.0.0",
+  "description": "dev generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dioris-cpu/dev-gen.git"
+  },
+  "keywords": [
+    "gen"
+  ],
+  "author": "Dioris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dioris-cpu/dev-gen/issues"
+  },
+  "homepage": "https://github.com/Dioris-cpu/dev-gen#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "conversions": "^1.5.2",
+    "converter": "0.0.5",
+    "electron-html-to": "^2.6.0",
+    "file": "^0.2.2",
+    "inquirer": "^7.0.4",
+    "path": "^0.12.7",
+    "system": "^2.0.1"
+  },
+  "devDependencies": {
+    "electron": "^7.1.10"
+  }
+}
