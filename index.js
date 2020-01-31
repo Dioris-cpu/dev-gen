@@ -6,12 +6,6 @@ const generateHTML = require("./generateHTML");
 const axios = require("axios");
 // const pdfconverter = require("html-pdf")
 
-// everytime i try to push up a github after installing npm packages I get an error message: // File node_modules/electron/dist/Electron.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron F
-// ramework is 110.26 MB; this exceeds GitHub's file size limit of 100.00 MB
-// To github.com:Dioris-cpu/dev-gen.git
-//  ! [remote rejected] master -> master (pre-receive hook declined)
-// error: failed to push some refs to 'git@github.com:Dioris-cpu/dev-gen.git'
-
 function userInput() {
   return inquirer
     .prompt([
@@ -92,11 +86,12 @@ function userInput() {
             res.data.color = color;
             // console.log(res.data);
             // console.log(generateHTML(res.data)
-            conversion({ html: generateHTML(dataObj) }, function(err, result) {
+            const html = generateHTML(dataObj)
+            console.log(html)
+            conversion({ html: html}, function(err, result) {
               if (err) {
                 return console.error(err);
               }
-
               result.stream.pipe(
                 fs.createWriteStream(path.join(__dirname, "test.pdf"))
               );
