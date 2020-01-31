@@ -27,6 +27,7 @@
     "file": "^0.2.2",
     "inquirer": "^7.0.4",
     "path": "^0.12.7",
+    "pdf-converter": "^0.1.1",
     "system": "^2.0.1"
   },
   "devDependencies": {
